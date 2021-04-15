@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context.xsd
+	   		http://www.springframework.org/schema/tx 
+			http://www.springframework.org/schema/tx/spring-tx.xsd
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- Cấu hình interceptor --> 
+	<mvc:interceptors>  
+		<mvc:interceptor>
+<!-- 			Lọc trong BaiVietController -->
+			<mvc:mapping path="/insertcontent.htm"/>
+			<mvc:mapping path="/contents/insert.htm"/>
+			<mvc:mapping path="/contents/update/**"/>
+			<mvc:mapping path="/contents/delete/**"/>
+<!-- 			Lọc trong DanhMucController -->
+			<mvc:mapping path="/insertcatalog.htm"/>
+			<mvc:mapping path="/catalogs/insert.htm"/>
+			<mvc:mapping path="/catalogs/delete/**"/>
+			<mvc:mapping path="/catalogs/update/**"/>
+<!-- 			Lọc Trong UploadController -->
+			<mvc:mapping path="/content/uploadfile.htm"/>
+			<mvc:mapping path="/upload.htm"/>
+<!-- 			Lọc trong ManagerController -->
+			<mvc:mapping path="/manager.htm"/>
+			<mvc:mapping path="/managers/select.htm"/>
+			<mvc:mapping path="/logout.htm"/>
+			<bean class="blog.controller.InterceptorController" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+</beans>

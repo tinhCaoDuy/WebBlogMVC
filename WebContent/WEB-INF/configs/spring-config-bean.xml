@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context.xsd
+	   		http://www.springframework.org/schema/tx 
+			http://www.springframework.org/schema/tx/spring-tx.xsd
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<bean id="blog" class="blog.bean.Blog">
+		<property name="webname" value="BLog-G" />
+		<property name="webicons" value="configauthor/iconsblog.PNG" />
+		<property name="author" value="Lê Trường Giang" />
+		<property name="authorImage" value="configauthor/smileblog.jpg" />
+		<property name="authorDiscription"
+			value="Chào bạn rất vui khi đã đến trang Blog của tôi…
+			Blog này tôi viết ra nhằm chia sẻ những quan điểm cũng như nhưng kinh nghiệm 
+		 	của mình cho mọi người và chia sẻ những câu chuyện trong đời sống mà tôi đã trải qua. Đặc biệt
+			phần tôi chia sẻ với các bạn những gì tôi biết chủ yếu sẽ là lĩnh vực IT vì đó lĩnh vực của tôi
+		  	cũng như những gì tôi tìm hiểu và được học. Rất vui khi mọi người sẽ chia sẻ với tôi và đóng góp cùng 
+		   	tôi nhiều câu chuyện ở nhiều lĩnh vực khác nhau… Để có thể đóng góp và liên lạc bạn có thể tham khảo những 
+		   	thông tin bên dưới, Xin cảm ơn bạn đã đọc!!" />
+		<property name="mailAuthor" value="n17dcat020@student.ptithcm.edu.vn" />
+		<property name="phone" value="0868889709" />
+		<property name="tel" value="0868889709" />
+		<property name="address"
+			value="97 Man Thiện, Phường Hiệp Phú, Quận 9, TP HCM" />
+		<property name="year" value="2019" />
+		<property name="mail" value="n17dcat020@student.ptithcm.edu.vn" />
+	</bean>
+
+</beans>
